@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Sapir Rost-portfolio</title>
+</head>
+
+<body>
+
+    <div id='loading_wrap'>
+        <div class="loader-div">
+            <div class="loader"></div>
+            <h4 class="title" id="load-title"></h4>
+        </div>
+    </div>
+    <nav class="nav changed-nav sticky-top" id="changed-nav">
+        <button class="navbar-toggler dropdown-toggle" id="btn-dropdown" type="button" data-toggle="collapse"
+            data-target="#navbarNavDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+            style="display:none;">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="lg-screen-menu">
+            <div class="logo-wrep">
+                <label class="logo">
+                    <img class="selfIMG" src="img/selfIMG.jpg" />
+                    <h6>SAPIR ROST</h6>
+                    <p class="details">FULL STACK WEB DEVELOPER</p>
+                </label>
+            </div>
+            <ul class="menu">
+                <li class="hide contain-techs-link"><a href="#contain-techs">TECHNOLOGIES</a></li>
+                <li class="hide contain-projs-link"><a href="#contain-projs">PROJECTS</a></li>
+                <li class="hide contain-about-link"><a href="#contain-about">ABOUT</a></li>
+            </ul>
+        </div>
+        <div class="dropdown-menu" aria-labelledby="btn-dropdown" id="navbarNavDropdown">
+            <a class="dropdown-item" href="#contain-techs">TECHNOLOGIES</a>
+            <a class="dropdown-item" href="#contain-projs">PROJECTS</a>
+            <a class="dropdown-item" href="#contain-about">ABOUT</a>
+        </div>
+    </nav>
+    <div class="container">
+        <header class="land-section" id="land-section">
+            <nav class="nav left" id="left">
+                <div class="lg-screen-menu">
+                    <ul class="menu">
+                        <li class="hide contain-techs-link"><a href="#contain-techs">TECHNOLOGIES</a></li>
+                        <li class="hide contain-projs-link"><a href="#contain-projs">PROJECTS</a></li>
+                        <li class="hide contain-about-link"><a href="#contain-about">ABOUT</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="right">
+                <div class="logo-wrep">
+                    <label class="logo">
+                        <h1>SAPIR ROST</h1>
+                        <p class="details">FULL STACK WEB DEVELOPER</p>
+                        <p>ready to start ?</p>
+                        <i class="fas fa-arrow-down"></i>
+                    </label>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        <section class="row nav-element" id="contain-about">
+            <div class="title-div">
+                <h2 class="title title-effect">ABOUT ME</h2>
+            </div>
+            <div class="row about-wrep">
+                <div class="col about details">
+                    <img class="selfIMG" src="img/selfIMG.jpg">
+                    <p class="second-title">Hi, my name is <strong>Sapir Rost,</strong> <br />and I'm a Full stack Web
+                        Developer</p>
+                    <p class="more-info">
+                        I am using front-end and back-end technologies to design responsive and dynamic apps.
+                        <br />One of the most important things you need to know about me is
+                        that I absolutely love learning new technologies, libraries
+                        and integrate them in my projects.
+                        Always a thrill to grow and learn more.
+                        <h5>Want to get in touch ?</h5>
+                    </p>
+                    <ul class="contact-list">
+                        <li class="contact-item"><a href="https://www.linkedin.com/in/sapir-rost-90b01a187/">
+                                <i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                        <li class="contact-item"><a href="https://github.com/sapirost"><i class="fab fa-github"></i></a>
+                        </li>
+                        <li class="contact-item myEmail" data-toggle="tooltip" title="click to copy my email">
+                            <input class="linkToCopy" value="sapir.rost@gmail.com"
+                                style="position: absolute; z-index: -999; opacity: 0;" />
+                            <i class="fas fa-envelope"></i>
+                        </li>
+                    </ul>
+                    <span class="showingMail">sapir.rost@gmail.com</span>
+                </div>
+                <div class="col about img-div">
+                    <img src="img/programming.png" alt="" />
+                </div>
+            </div>
+        </section>
+
+        <div class="row wrapper">
+            <section class="divide-section"></section>
+
+            <section class="nav-element" id="contain-projs">
+                <div class="title-div">
+                    <h2 class="title title-effect">PROJECTS</h2>
+                </div>
+                <section class="row project" id="vacation-section">
+                    <div class="tab-content col" id="vacation">
+                        <h6 class="title"><strong>Responsive Design:</strong></h6>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="computer-vacation-tab" data-toggle="tab"
+                                    href="#computer-vacation" role="tab" aria-controls="computer-vacation"
+                                    aria-selected="true">computer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="ipad-vacation-tab" data-toggle="tab" href="#ipad-vacation"
+                                    role="tab" aria-controls="ipad-vacation" aria-selected="false">tablet</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="iphone-vacation-tab" data-toggle="tab" href="#iphone-vacation"
+                                    role="tab" aria-controls="iphone-vacation" aria-selected="false">smartphone</a>
+                            </li>
+                        </ul>
+                        <div class="screen comp tab-pane fade show active" id="computer-vacation" role="tabpanel"
+                            aria-labelledby="computer-vacation-tab">
+                            <div class="img-div"> <img src="img/vac-web3.jpg" /> </div>
+                        </div>
+                        <div class="screen ipad tab-pane fade" id="ipad-vacation" role="tabpanel"
+                            aria-labelledby="ipad-vacation-tab">
+                            <div class="img-div"> <img src="img/vac-web4.jpg" /> </div>
+                        </div>
+                        <div class="screen iphone tab-pane fade" id="iphone-vacation" role="tabpanel"
+                            aria-labelledby="iphone-vacation-tab">
+                            <div class="img-div"> <img src="img/vac-phone3.jpg" /> </div>
+                        </div>
+                    </div>
+                    <div class="description-container col">
+                        <h3>VACATION'S APP</h3>
+                        <p class="description">
+                            This app includes the most updated vacation's deals,
+                            the most popular destinations and real time changes.
+                        </p>
+                        <h6 class="title"><strong>Technologies Used:</strong></h6>
+                        <ul class="skills">
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>MySQL</li>
+                            <li>Socket.io</li>
+                            <li>Material UI</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="row project" id="criptonite-section">
+                    <div class="tab-content col active" id="criptonite">
+                        <h6 class="title"><strong>Responsive Design:</strong></h6>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="computer-criptonite-tab" data-toggle="tab"
+                                    href="#computer-criptonite" role="tab" aria-controls="computer-criptonite"
+                                    aria-selected="true">computer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="ipad-criptonite-tab" data-toggle="tab" href="#ipad-criptonite"
+                                    role="tab" aria-controls="ipad-criptonite" aria-selected="false">tablet</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="iphone-criptonite-tab" data-toggle="tab"
+                                    href="#iphone-criptonite" role="tab" aria-controls="iphone-criptonite"
+                                    aria-selected="false">smartphone</a>
+                            </li>
+                        </ul>
+
+                        <div class="screen comp tab-pane fade show active" id="computer-criptonite" role="tabpanel"
+                            aria-labelledby="computer-criptonite-tab">
+                            <div class="img-div"> <img src="img/cript-web2.jpg" /> </div>
+                        </div>
+                        <div class="screen ipad tab-pane fade" id="ipad-criptonite" role="tabpanel"
+                            aria-labelledby="ipad-criptonite-tab">
+                            <div class="img-div"> <img src="img/cript-web3.jpg" /> </div>
+                        </div>
+                        <div class="screen iphone tab-pane fade" id="iphone-criptonite" role="tabpanel"
+                            aria-labelledby="iphone-criptonite-tab">
+                            <div class="img-div"> <img src="img/cript-phone.jpg" /> </div>
+                        </div>
+                    </div>
+
+                    <div class="description-container col">
+                        <h3>CRIPTONITE</h3>
+                        <p class="description">
+                            The virtual trade world has become very popular in recent years,
+                            This app contains information about 100 different coins, Including real-time reports.
+                        </p>
+                        <h6 class="title"><strong>Technologies Used:</strong></h6>
+                        <ul class="skills">
+                            <li>JavaScript</li>
+                            <li>jQuery</li>
+                            <li>Ajax</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </section>
+
+
+            <section class="divide-section"></section>
+        </div>
+
+        <section class="row nav-element" id="contain-techs">
+            <div class="title-div">
+                <h2 class="title title-effect">TECHNOLOGIES</h2>
+            </div>
+
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="detailsCheck" checked>
+                <label class="custom-control-label" for="detailsCheck">showing technologies details
+                    <br />(revealed by mouse pointing<br /> on relevent technology)
+                </label>
+            </div>
+            <h5 class="title">Development of dynamic user interfaces</h5>
+            <div class="row">
+                <div class="item col">
+                    <img src="img/html5-icon.png" alt="" data-placement="top" data-toggle="tooltip" title="HTML5 is a software solution stack that defines the properties and behaviors 
+                    of web page content by implementing a markup based pattern to it.">
+                    <h5>HTML5</h5>
+                </div>
+                <div class="item col">
+                    <img src="img/javascript-icon.png" alt="" data-toggle="tooltip" title="JavaScript is a high-level, interpreted 
+                programming language that conforms to the ECMAScript specification. JavaScript has curly-bracket 
+                syntax, dynamic typing, prototype-based object-orientation, and first-class functions.">
+                    <h5>JAVASCRIPT</h5>
+                </div>
+                <div class="item col">
+                    <img src="img/jquery-icon.png" alt="" data-placement="top" data-toggle="tooltip" title="jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and 
+                manipulation, as well as event handling, CSS animation, and Ajax.">
+                    <h5>JQUERY</h5>
+                </div>
+                <div class="item col">
+                    <img src="img/react-icon.png" alt="" data-placement="top" data-toggle="tooltip" title="React is a JavaScript library for building  user interfaces. It is maintained 
+                by Facebook and a community of individual developers and companies.">
+                    <h5>REACT</h5>
+                </div>
+                <div class="item col">
+                    <img src="img/angular-icon.png" alt="" data-placement="top" data-toggle="tooltip" title="Angular is a TypeScript-based open-source web application framework led by 
+                the Angular Team at Google and by a community of individuals and corporations.">
+                    <h5>ANGULAR</h5>
+                </div>
+            </div>
+
+            <h5 class="title">Design user interfaces</h5>
+            <div class="row">
+                <div class="item col">
+                    <img src="img/css3-icon.png" alt="" data-placement="top" data-toggle="tooltip" title="Cascading Style Sheets (CSS) is a style sheet language used for describing the 
+                presentation of a web page, CSS 3 is divided into several separate documents called 
+                'modules'. Each module adds new capabilities or extends features defined in CSS 2.">
+                    <h5>CSS3</h5>
+                </div>
+                <div class="item col">
+                    <img src="img/sass-icon.png" alt="" data-placement="top" data-toggle="tooltip" title="Sass is a preprocessor scripting language that is interpreted or compiled into 
+                Cascading Style Sheets (CSS). SassScript is the scripting language itself.
+                Sass extends CSS by providing several mechanisms available in more traditional programming languages.">
+                    <h5>SASS</h5>
+                </div>
+                <div class="item col">
+                    <img src="img/bootstrap-icon.png" alt="" data-placement="top" data-toggle="tooltip" title="Framework for building responsive, mobile-first sites, with BootstrapCDN and 
+                a template starter page. It contains CSS- and (optionally) 
+                JavaScript-based design templates.">
+                    <h5>BOOTSTRAP</h5>
+                </div>
+                <div class="item col">
+                    <img src="img/materialize-icon.png" alt="" data-placement="top" data-toggle="tooltip" title="A modern responsive front-end framework based on Material Design. It contains 
+                CSS- and (optionally)  JavaScript-based design templates.">
+                    <h5>MATERIALIZE</h5>
+                </div>
+            </div>
+
+            <h5 class="title">Advanced server development (working with databases, external interfaces)</h5>
+            <div class="row">
+                <div class="item col">
+                    <img src="img/nodejs-icon.png" alt="" data-placement="top" data-toggle="tooltip" title="Node.js is an open-source, cross-platform JavaScript run-time environment 
+                that executes JavaScript code outside of a browser. Node.js lets developers use 
+                JavaScript to write command line tools and for server-side scripting—running scripts 
+                server-side to produce dynamic web page .">
+                    <h5>NODE.JS</h5>
+                </div>
+                <div class="item col">
+                    <img src="img/sql-icon.png" alt="" data-placement="top" data-toggle="tooltip"
+                        title="MySQL is an open-source relational database management system (RDBMS).">
+                    <h5>MySQL</h5>
+                </div>
+                <div class="item col">
+                    <img src="img/mongodb-icon.png" alt="" data-placement="top" data-toggle="tooltip" title="MongoDB is a cross-platform document-oriented database program. Classified 
+                as a NoSQL database program, MongoDB uses JSON-like documents with schemata.">
+                    <h5>MongoDB</h5>
+                </div>
+            </div>
+        </section>
+
+        <span id="footer-email" class="showingMail2">sapir.rost@gmail.com</span>
+        <footer class="row">
+            <ul class="contact-list">
+                <li>
+                    <a href="https://www.linkedin.com/in/sapir-rost-90b01a187/"> <i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                    <a href="https://github.com/sapirost"><i class="fab fa-github"></i></a>
+                </li>
+                <li class="myEmail2" data-toggle="tooltip" title="click to copy my email">
+                    <input class="linkToCopy2" value="sapir.rost@gmail.com"
+                        style="position: absolute; z-index: -999; opacity: 0;" />
+                    <i class="fas fa-envelope"></i>
+                </li>
+            </ul>
+            © SAPIR ROST 2019
+
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="aeo-typewriter.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
+
+</body>
+
+</html>
