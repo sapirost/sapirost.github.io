@@ -1,17 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins|Quicksand");
 
+ul {list-style: none!important;}
+
 @keyframes fade {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
 @keyframes roll {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
 }
 
 @keyframes slide-show-vartical{
@@ -171,35 +169,26 @@
   }
 }
 
-@media (min-height: 451px) {
-  .left .menu {
-    padding-left: 30px !important;
-  }
-}
-
 @media (max-width: 633px) {
-  .left {
-    transform: skewx(-10deg)!important;
-    /* left: -55px; */
-    border-width: 1px!important;
-  }
+  .left { border-width: 1px!important; }
 }
 
 @media (max-width: 394px) and (min-width: 363px) {
-  .right .logo-wrep {
-    width: 260px !important;
-  }
+  .right .logo-wrep { width: 260px !important; }
 }
 
 * {
   font-family: "Poppins", sans-serif;
   transition: all 1s;
- /*  box-sizing: border-box; */
 }
 
 @media (max-width: 400px) {
   .left {display: none!important;}
   .changed-nav {display: block!important; }
+}
+
+@media (min-width: 731px) {
+  .about-wrep .details {width: 370px!important; min-width: 370px!important;}
 }
 
 @media (max-width: 415px) {

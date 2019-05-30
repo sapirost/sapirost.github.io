@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins|Quicksand");
+ul {
+  list-style: none !important;
+}
+
 @-webkit-keyframes fade {
   from {
     opacity: 0;
@@ -7,6 +11,7 @@
     opacity: 1;
   }
 }
+
 @keyframes fade {
   from {
     opacity: 0;
@@ -343,17 +348,8 @@
   }
 }
 
-@media (min-height: 451px) {
-  .left .menu {
-    padding-left: 30px !important;
-  }
-}
-
 @media (max-width: 633px) {
   .left {
-    -webkit-transform: skewx(-10deg) !important;
-            transform: skewx(-10deg) !important;
-    /* left: -55px; */
     border-width: 1px !important;
   }
 }
@@ -368,7 +364,6 @@
   font-family: "Poppins", sans-serif;
   -webkit-transition: all 1s;
   transition: all 1s;
-  /*  box-sizing: border-box; */
 }
 
 @media (max-width: 400px) {
@@ -377,6 +372,13 @@
   }
   .changed-nav {
     display: block !important;
+  }
+}
+
+@media (min-width: 731px) {
+  .about-wrep .details {
+    width: 370px !important;
+    min-width: 370px !important;
   }
 }
 
@@ -419,6 +421,10 @@ body {
 
 button:focus {
   outline: none;
+}
+
+.contain-header, header {
+  overflow-x: hidden;
 }
 
 .dropdown-menu.show {
@@ -588,12 +594,19 @@ button:focus {
           transform: skewx(-20deg);
   border-right: 0.5px solid #ffffff69;
   border-left: 0.5px solid #ffffff69;
-  width: 200px;
+  width: 170px;
   -webkit-box-shadow: 0 2px 4px 0 rgba(78, 78, 78, 0.2), 0 2px 8px 0 rgba(78, 78, 78, 0.2);
           box-shadow: 0 2px 4px 0 rgba(78, 78, 78, 0.2), 0 2px 8px 0 rgba(78, 78, 78, 0.2);
-  /*   .lg-screen-menu {
-    transform: skewx(10deg);
-  } */
+}
+
+.left .lg-screen-menu {
+  width: 100%;
+}
+
+.left .lg-screen-menu .menu {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  padding-left: 10px;
 }
 
 .nav {
@@ -602,11 +615,6 @@ button:focus {
   letter-spacing: 1.5px;
   margin-top: 0;
   z-index: 9;
-}
-
-.nav .menu {
-  list-style: none;
-  /* padding-inline-start: 20px; */
 }
 
 .nav .logo-wrep {
@@ -746,12 +754,19 @@ button:focus {
   transform: translateX(50px);
   -webkit-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .about-wrep .img-div img {
   margin: auto;
   height: 270px;
   width: 290px;
+  padding-bottom: 20px;
 }
 
 .about-wrep .details.visible,
@@ -847,7 +862,6 @@ button:focus {
 }
 
 .nav-tabs {
-  list-style: none;
   width: 300px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1035,7 +1049,6 @@ section {
 }
 
 .details .contact-list {
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1137,7 +1150,6 @@ section {
 }
 
 .project .description-container .skills {
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1200,7 +1212,6 @@ footer .contact-list {
   padding-left: 0;
   margin-top: auto;
   margin-bottom: auto;
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1279,8 +1290,13 @@ footer .contact-list li:hover a {
 }
 
 .custom-control {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 14px;
   font-weight: 600;
+  width: 100%;
+}
+
+.custom-control .custom-control-label {
+  margin-left: -10px;
 }
 /*# sourceMappingURL=style.css.map */
