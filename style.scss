@@ -5,7 +5,8 @@
 
 button:focus { outline: none; }
 
-.site-wrapper {height: 100%; width: 100%; overflow-x: hidden!important;}
+body, .contain-header, .container {height: 100%; overflow-x: hidden!important; width: 100%; max-width: 100%;}
+.site-wrapper {height: 100%; width: 100%; max-width: 100%; overflow-x: hidden!important;}
 
 .dropdown-menu.show { animation: slide-top 1s ease-in-out; }
 

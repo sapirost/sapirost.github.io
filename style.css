@@ -401,9 +401,17 @@ button:focus {
   outline: none;
 }
 
+body, .contain-header, .container {
+  height: 100%;
+  overflow-x: hidden !important;
+  width: 100%;
+  max-width: 100%;
+}
+
 .site-wrapper {
   height: 100%;
   width: 100%;
+  max-width: 100%;
   overflow-x: hidden !important;
 }
 
