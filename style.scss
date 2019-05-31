@@ -1,13 +1,11 @@
 @import "constant.scss";
 
-body {overflow-x: hidden;}
-
-.nav .menu li.show { animation: slide 1s ease-in-out; }
+#left .menu li.show { animation: slide 1s ease-in-out; }
 .hide { opacity: 0; }
 
 button:focus { outline: none; }
 
-.contain-header, header {overflow-x: hidden;}
+.site-wrapper {height: 100%; width: 100%; overflow-x: hidden!important;}
 
 .dropdown-menu.show { animation: slide-top 1s ease-in-out; }
 
@@ -16,19 +14,13 @@ button:focus { outline: none; }
 .sliding-show-horizontal { animation: slide-show-horizontal 1s ease-in-out; }
 .sliding-hide-horizontal { animation: slide-hide-horizontal 1.5s ease-in-out; }
 
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%;
-  min-height: 100%;
-}
-
 .container {
   padding-right: 0;
   padding-left: 0;
   margin-right: 0;
   margin-left: 0;
   min-width: 100%;
+  max-width: 100%;
 }
 .row {
   margin-right: 0;
@@ -37,8 +29,9 @@ button:focus { outline: none; }
 
 #loading_wrap {
   animation: fade 1s ease-in-out;
-  position: fixed;
-  height: 100%;
+  position: absolute;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100%;
   top: 0;
   left: 0;
@@ -51,8 +44,11 @@ button:focus { outline: none; }
   background-size: cover;
   z-index: 9999;
   .loader-div {
-    top: calc(50% - 4em);
-    left: calc(50% - 4em);
+    left: 50%!important;
+    top: 50%!important;
+    transform: translate(-50%, -50%)!important;
+    width: 200px;
+    height: 150px;
     position: absolute;
     .loader {
       width: 6em;
@@ -62,12 +58,14 @@ button:focus { outline: none; }
       border-radius: 50%;
       animation: load8 1.6s infinite linear;
       transition: opacity 0.3s;
-      margin-left: 10px;
+      margin: auto;
     }
     .title {
       color: white;
       margin-top: 10px;
-      margin-left: -12px;
+      text-align: left;
+      padding-left: 5px;
+      height: calc(150px - 6em);
       text-shadow: 1px 1px 5px black;
     }
   }
@@ -77,6 +75,7 @@ button:focus { outline: none; }
   width: 100%;
   position: relative;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   box-shadow: 0 1px 10px hsla(0, 0%, 0%, 0.25);
 }
 
@@ -98,8 +97,10 @@ button:focus { outline: none; }
   .logo-wrep {
     opacity: 0;
     position: absolute;
-    top: 40vh;
-    right: 30%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
     width: 300px;
     color: white;
     text-align: center;
@@ -159,6 +160,7 @@ button:focus { outline: none; }
   letter-spacing: 1.5px;
   margin-top: 0;
   z-index: 9;
+  transition: all 0.8s ease-in-out;
 
   .logo-wrep {
     display: none;
@@ -205,20 +207,25 @@ button:focus { outline: none; }
 }
 
 .changed-nav {
+  position: fixed;
+  width: 100%;
   display: none;
-  transition: width 2s ease-in-out;
   opacity: 0;
   height: 55px;
   padding: 5px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.315), 0 2px 8px 0 rgba(0, 0, 0, 0.315);
   .lg-screen-menu {
+    width: 100%;
     height: 100%;
     display: flex;
+    .nav-wrep {
+      width: calc(100% - 230px);
+    }
   }
   .logo-wrep {
     display: flex !important;
     height: 100%;
-    animation: slide 3.5s ease-in-out;
+    width: 230px;
     padding-left: 5px !important;
     img {
       margin-top: 0;
@@ -227,15 +234,18 @@ button:focus { outline: none; }
   .menu {
     height: 100%;
     margin-bottom: 0;
-    animation: slide 3.5s ease-in-out;
     display: flex;
     float: right !important;
     position: absolute;
     right: 0;
     bottom: 0;
-    padding-right: 15px;
     li {
-      padding: 15px 5px !important;
+      padding: 15px 5px;
+      height: 100%;
+    }
+    li:last-child {
+      padding: 15px 2px 15px 5px;
+      height: 100%;
     }
     li.active {
       border-bottom: 3px solid white;
@@ -591,12 +601,6 @@ section {
     min-width: 310px;
     padding-left: 0;
     height: 400px;
- /*    .descrip {
-      width: 300px;
-      margin: auto;
-      display: block;
-      text-align: center;
-    } */
 
     .title {
       font-size: 14px;

@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins|Quicksand");
+* {
+  font-family: "Poppins", sans-serif;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
 ul {
   list-style: none !important;
 }
@@ -234,8 +240,7 @@ ul {
 @-webkit-keyframes slide {
   from {
     opacity: 0;
-    -webkit-transform: translateX(-20px);
-            transform: translateX(-20px);
+    width: 0px;
   }
   to {
     opacity: 1;
@@ -245,8 +250,7 @@ ul {
 @keyframes slide {
   from {
     opacity: 0;
-    -webkit-transform: translateX(-20px);
-            transform: translateX(-20px);
+    width: 0px;
   }
   to {
     opacity: 1;
@@ -297,26 +301,18 @@ ul {
   }
 }
 
-@media (max-width: 705px) {
+@media (max-width: 642px) and (min-width: 420px) {
   .right .logo-wrep {
     top: unset !important;
+    left: unset !important;
     right: 3px !important;
     bottom: 5px !important;
+    -webkit-transform: none !important;
+            transform: none !important;
   }
 }
 
-@media (max-width: 440px) {
-  .right .logo-wrep {
-    right: 0 !important;
-    bottom: 0 !important;
-    width: 200px !important;
-  }
-  .right .logo-wrep h1 {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 645px) {
+@media (max-width: 635px) {
   .slide {
     width: 100% !important;
     margin: 0 !important;
@@ -326,7 +322,6 @@ ul {
     display: -ms-flexbox !important;
     display: flex !important;
     float: right;
-    margin: auto;
     height: 100%;
   }
   .changed-nav .dropdown-toggle::after {
@@ -354,27 +349,6 @@ ul {
   }
 }
 
-@media (max-width: 394px) and (min-width: 363px) {
-  .right .logo-wrep {
-    width: 260px !important;
-  }
-}
-
-* {
-  font-family: "Poppins", sans-serif;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
-@media (max-width: 400px) {
-  .left {
-    display: none !important;
-  }
-  .changed-nav {
-    display: block !important;
-  }
-}
-
 @media (min-width: 731px) {
   .about-wrep .details {
     width: 370px !important;
@@ -382,13 +356,21 @@ ul {
   }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 420px) {
   .project .tab-content, .project .description-container {
     margin: auto !important;
+  }
+  /* .land-section {height: calc(var(--vh, 1vh) * 65)!important; height: 65vh!important;} */
+  .left {
+    display: none !important;
+  }
+  .changed-nav {
+    display: block !important;
   }
   .contain-projs {
     background: #ececec !important;
   }
+  /* #loading_wrap {height: calc(var(--vh, 1vh) * 85)!important; height: 85vh!important;} */
   .divide-section:first-child {
     background: url("img/photo4-Up.jpg");
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0.308)), to(rgba(255, 255, 255, 0.308))), url("img/photo4-Up.jpg") !important;

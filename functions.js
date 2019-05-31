@@ -6,7 +6,7 @@ $(document).ready(function () {
   });
   setTimeout(function () {
     
-    $('#loading_wrap .loader').fadeOut(2000, function () {
+    $('#loading_wrap').fadeOut(2000, function () {
       $('#loading_wrap').remove();
       $('.left, .changed-nav').css("opacity", "1");
       $(".right .logo-wrep").css("opacity", "1");
@@ -19,6 +19,11 @@ $(document).ready(function () {
       });
     });
   }, 3000);
+
+  window.addEventListener('resize',function () {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  });
 
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
@@ -110,13 +115,6 @@ $(document).ready(function () {
     }
   });
 
-/*   $('#btn-dropdown').on('click', function () {
-    if ($(this).attr("aria-expanded")=='true')
-      $("#btn-dropdown i").removeClass('fas fa-times').addClass('fas fa-bars');
-    else 
-      $("#btn-dropdown i").removeClass('fas fa-bars').addClass('fas fa-times');
-  }); */
-
   $(".fa-arrow-down").on('click', function () {
     var elemHeight = $(".land-section").height();
     $('html, body').animate({ scrollTop: elemHeight }, 1000);
@@ -125,25 +123,18 @@ $(document).ready(function () {
 
   $(window).on('scroll', function () {
     var elemHeight = $(".land-section").height();
-    elemHeight = elemHeight * 0.5;
-    if (window.outerWidth >= 400) {
-      if (elemHeight - window.scrollY <= 0) {
-      
-        $('#left').removeClass("sliding-show-horizontal").addClass("sliding-hide-horizontal").hide();
-        setTimeout(function(){
-          $('#changed-nav').removeClass("sliding-hide-vartical").addClass("sliding-show-vartical").show();
-        },500)
-      }
-  
-      else{
+    elemHeight = elemHeight * 0.4;
+    if (window.outerWidth >= 420) {
+      if (elemHeight - window.scrollY < 1) {
+        $('#left').removeClass("sliding-show-horizontal").addClass("sliding-hide-horizontal").hide('slow');
+        $('#changed-nav').removeClass("sliding-hide-vartical").addClass("sliding-show-vartical").show();
+      } 
+      else {
         $('#changed-nav').removeClass("sliding-show-vartical").addClass("sliding-hide-vartical").hide("slow");
-        setTimeout(function(){
-          $('#left').removeClass("sliding-hide-horizontal").addClass("sliding-show-horizontal").show();
-        },500)
+        $('#left').removeClass("sliding-hide-horizontal").addClass("sliding-show-horizontal").show();
       }
     }
   });
-
 
   $("#nav li").on('click', function (event) {
     $(this).siblings('li').removeClass('active');
